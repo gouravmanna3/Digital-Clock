@@ -1,10 +1,10 @@
 function displayTime() {
-  var date = new Date();
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  var seconds = date.getSeconds();
+  const date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
 
-  var session = 'AM'
+  let session = 'AM'
 
   if(hours == 0) {
       hours = 12;
@@ -19,10 +19,9 @@ function displayTime() {
  minutes = convertTime(minutes);
  seconds = convertTime(seconds);
 
- const time = hours + ':' + minutes + ':' + seconds + ' ' + session;
-
- document.getElementById("myClockContainer").innerHTML = time;
- document.getElementById("myClockContainer").textContent = time;
+ document.getElementById("hours").textContent = hours;
+ document.getElementById("minutes").textContent = minutes;
+ document.getElementById("ampm").textContent = session;
 
   setTimeout(function(){
       displayTime();
@@ -34,3 +33,11 @@ function convertTime(x) {
       return "0"+x;
   return x;
 }
+
+var toggle = true;
+separatorElement = document.getElementById("separatorId");
+
+setInterval(function(){
+  toggle ? separatorElement.classList.add('blink') : separatorElement.classList.remove('blink');
+  toggle = !toggle;
+},1000);

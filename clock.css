@@ -6,7 +6,7 @@ body {
   position: fixed;
   top: 50%;
   left: 56%;
-  color: #17D4FE;
+  color: #ffffff;
   font-size: 20vw;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
@@ -22,6 +22,10 @@ body {
 .timeformat {
   font-size: 6vw;
   font-weight: 200;
+}
+
+.blink {
+  visibility: hidden;
 }
 
 .title {
