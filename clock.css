@@ -5,7 +5,7 @@ body {
 .clock {
   position: fixed;
   top: 50%;
-  left: 56%;
+  left: 50%;
   color: #ffffff;
   font-size: 20vw;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -17,6 +17,10 @@ body {
 
 .clock > .separator {
   margin: 0 3vw; 
+}
+
+#seconds{
+    margin: 0 3vw; 
 }
 
 .timeformat {

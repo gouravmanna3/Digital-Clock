@@ -21,6 +21,7 @@ function displayTime() {
 
  document.getElementById("hours").textContent = hours;
  document.getElementById("minutes").textContent = minutes;
+ document.getElementById("seconds").textContent = seconds; 
  document.getElementById("ampm").textContent = session;
 
   setTimeout(function(){
