@@ -71,3 +71,22 @@ footer span {
   margin-left: 2px;
 }
 
+.weekdays-container{
+ display: block;
+ color:#b19194;
+ position:absolute;
+ left:25%;
+ top:20vh;
+}
+
+.weekdays{
+ margin:10px 20px;
+ display: inline-block;
+ font-size: 2vw;
+}
+
+.currentday{
+  color:#eee;
+}
+
+

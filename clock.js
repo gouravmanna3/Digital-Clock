@@ -21,7 +21,6 @@ function displayTime() {
 
  document.getElementById("hours").textContent = hours;
  document.getElementById("minutes").textContent = minutes;
- document.getElementById("seconds").textContent = seconds; 
  document.getElementById("ampm").textContent = session;
 
   setTimeout(function(){
@@ -35,6 +34,17 @@ function convertTime(x) {
   return x;
 }
 
+function getDay() {
+  const date = new Date();
+  let day = date.getDay();
+
+  if (day == 6) {
+    document.getElementById("sat").classList.add("currentday");
+  }
+
+}
+
+getDay();
 var toggle = true;
 separatorElement = document.getElementById("separatorId");
 

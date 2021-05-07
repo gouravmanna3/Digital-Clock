@@ -6,14 +6,33 @@
     <link rel="stylesheet" href="clock.css" />
   </head>
   <body onload="displayTime()">
-    <header class="title">
-      <h2>Digital Clock</h2>
-    </header>
+    <div class="weekdays-container" onload="getDay()">
+        <div class="weekdays" id="sun">
+          Sun
+        </div>
+        <div class="weekdays" id="mon">
+          Mon
+        </div>
+        <div class="weekdays" id="tue">
+          Tue
+        </div>
+        <div class="weekdays" id="wed">
+          Wed
+        </div>
+        <div class="weekdays" id="thu">
+          Thu
+        </div>
+        <div class="weekdays" id="fri">
+          Fri
+        </div>
+        <div class="weekdays" id="sat">
+          Sat
+        </div>
+    </div>
     <div class="clock" >
       <span id="hours" class="number"></span>
       <span id="separatorId" class="separator">:</span>
       <span id="minutes" class="number"></span>
-      <span id="seconds" class="number"></span>
       <span id="ampm" class="timeformat"></span>
     </div>
     <footer>Developed By Gourav Manna <span class="fa fa-heart"></span></footer>
