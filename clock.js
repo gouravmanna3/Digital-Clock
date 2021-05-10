@@ -29,7 +29,7 @@ function getTime() {
  document.getElementById("ampm").textContent = session;
 
   setTimeout(function(){
-      displayTime();
+    getTime();
   }, 1000);
 }
 
