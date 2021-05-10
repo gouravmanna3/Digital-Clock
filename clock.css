@@ -1,5 +1,6 @@
 body {
   background-color: #d52e3f;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 .clock {
@@ -37,6 +38,7 @@ body {
   font-family: 'Niconne', cursive;
   font-weight: 700;
   font-size: 5rem;
+  margin: 0;
   text-shadow: 1px 1px hsl(50, 50%, 45%),
   2px 2px hsl(50, 50%, 40%),
   3px 3px hsl(50, 50%, 35%),
@@ -67,3 +69,13 @@ footer span {
   margin-left: 2px;
 }
 
+.dateDayContainer {
+  width: 30vw;
+  margin: 3vw auto;
+  text-align: center;
+
+}
+
+.date {
+  font-size: 3vw;
+}
