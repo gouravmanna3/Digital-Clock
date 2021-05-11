@@ -1,5 +1,6 @@
 body {
   background-color: #d52e3f;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 .clock {
@@ -10,9 +11,16 @@ body {
   font-size: 20vw;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
-  transform: translateX(-50%) translateY(-50%);
   min-width: fit-content;
   display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-left: 8vw;
+  margin: 0 8vw;
+  border-radius: 5vw;
+  background-color: brown;
+;
+
 }
 
 .clock > .separator {
@@ -24,6 +32,7 @@ body {
 .timeformat {
   font-size: 6vw;
   font-weight: 200;
+  margin-left: 2vw;
 }
 
 .blink {
@@ -39,6 +48,7 @@ body {
   font-family: 'Niconne', cursive;
   font-weight: 700;
   font-size: 5rem;
+  margin: 0;
   text-shadow: 1px 1px hsl(50, 50%, 45%),
   2px 2px hsl(50, 50%, 40%),
   3px 3px hsl(50, 50%, 35%),
@@ -50,6 +60,31 @@ body {
   9px 9px hsl(50, 50%, 29%),
   10px 10px hsl(50, 50%, 28%),
   10px 10px 30px rgba(0,0,0,.7)
+}
+
+.colors {
+  position: fixed;
+  left: 0;
+  bottom: 3vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.colors > div {
+  height: 4vw;
+  width: 4vw;
+  border-radius: 50%;
+  margin: 2vw;
+  cursor: pointer;
+}
+
+.color1 {
+  background-color: aqua;
+}
+
+.color2 {
+  background-color: palegreen;
 }
 
 footer {
@@ -66,7 +101,13 @@ footer {
 
 footer span {
   color: red;
-  margin-left: 2px;
+  margin-left: 0.5vw;
+}
+
+.dateDayContainer {
+  width: 30vw;
+  margin: 3vw auto;
+  text-align: center;
 }
 
 .weekdays-container{
@@ -88,3 +129,6 @@ footer span {
 }
 
 
+.date {
+  font-size: 3vw;
+}

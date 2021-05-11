@@ -1,4 +1,9 @@
-function displayTime() {
+function displayClock() {
+  document.getElementById('date').textContent = getDate();
+  getTime();
+}
+
+function getTime() {
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -24,7 +29,7 @@ function displayTime() {
  document.getElementById("ampm").textContent = session;
 
   setTimeout(function(){
-      displayTime();
+    getTime();
   }, 1000);
 }
 
@@ -60,7 +65,21 @@ getDay();
 var toggle = true;
 separatorElement = document.getElementById("separatorId");
 
-setInterval(function(){
+setInterval(function() {
   toggle ? separatorElement.classList.add('blink') : separatorElement.classList.remove('blink');
   toggle = !toggle;
 },1000);
+
+function getDate () {
+  let today = new Date();
+  let month = today.toLocaleString( 'default', { month: 'long' });
+  let year = today.getFullYear();
+  let day = nth(today.getDate());
+
+  return month + ' ' + day + ' ' + year;
+}
+
+const nth = function (day) {
+  return day + (day ? ['th', 'st', 'nd', 'rd'][(day>3 && day<21) || day%10 > 3 ? 0 : day%10] : '');
+}
+
