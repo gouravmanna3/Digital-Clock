@@ -4,6 +4,9 @@ body {
 }
 
 .clock {
+  position: fixed;
+  top: 50%;
+  left: 50%;
   color: #ffffff;
   font-size: 20vw;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -23,6 +26,8 @@ body {
 .clock > .separator {
   margin: 0 3vw; 
 }
+
+
 
 .timeformat {
   font-size: 6vw;
@@ -104,6 +109,25 @@ footer span {
   margin: 3vw auto;
   text-align: center;
 }
+
+.weekdays-container{
+ display: block;
+ color:#b19194;
+ position:absolute;
+ left:25%;
+ top:20vh;
+}
+
+.weekdays{
+ margin:10px 20px;
+ display: inline-block;
+ font-size: 2vw;
+}
+
+.currentday{
+  color:#eee;
+}
+
 
 .date {
   font-size: 3vw;

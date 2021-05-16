@@ -39,6 +39,29 @@ function convertTime(x) {
   return x;
 }
 
+function getDay() {
+  const date = new Date();
+  let day = date.getDay();
+
+  if (day == 6) {
+    document.getElementById("sat").classList.add("currentday");
+  } else if (day == 5) {
+    document.getElementById("fri").classList.add("currentday");
+  } else if (day == 4) {
+    document.getElementById("thu").classList.add("currentday");
+  } else if (day == 3) {
+    document.getElementById("wed").classList.add("currentday");
+  } else if (day == 2) {
+    document.getElementById("tue").classList.add("currentday");
+  } else if (day == 1) {
+    document.getElementById("mon").classList.add("currentday");
+  } else if (day == 0) {
+    document.getElementById("sun").classList.add("currentday");
+  }
+
+}
+
+getDay();
 var toggle = true;
 separatorElement = document.getElementById("separatorId");
 
