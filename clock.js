@@ -83,3 +83,11 @@ const nth = function (day) {
   return day + (day ? ['th', 'st', 'nd', 'rd'][(day>3 && day<21) || day%10 > 3 ? 0 : day%10] : '');
 }
 
+
+let colorElement = document.getElementById('colorContainer');
+let timeElement = document.getElementById('timeContainer');
+colorElement.addEventListener('click', (event) => {
+  let compStyles = window.getComputedStyle(document.getElementById(event.target.id));
+  timeElement.style.color = compStyles.backgroundColor;
+  timeElement.style.boxShadow =  ` 0px 0px 40px 15px ${compStyles.backgroundColor}`;
+})
