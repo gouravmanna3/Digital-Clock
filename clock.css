@@ -1,5 +1,5 @@
 body {
-  background-color: #d52e3f;
+  background-image: url('https://www.xmple.com/wallpaper/linear-blue-black-gradient-1920x1080-c2-050d2f-01030a-a-0-f-14.svg');
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
@@ -18,9 +18,11 @@ body {
   padding-left: 8vw;
   margin: 0 8vw;
   border-radius: 5vw;
-  background-color: brown;
-;
-
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  background-clip: padding-box;
+  color: aqua;
+  box-shadow: 0px 0px 40px 15px aqua;
 }
 
 .clock > .separator {
@@ -85,6 +87,22 @@ body {
 
 .color2 {
   background-color: palegreen;
+}
+
+.color3 {
+  background-color: sandybrown;
+}
+
+.color4 {
+  background-color: darkcyan;
+}
+
+.color5 {
+  background-color: hotpink;
+}
+
+.color6 {
+  background-color: lightblue;
 }
 
 footer {
