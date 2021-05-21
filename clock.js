@@ -1,5 +1,5 @@
 function displayClock() {
-  document.getElementById('date').textContent = getDate();
+  document.getElementById('date').textContent = getCurrentDate();
   getTime();
 }
 
@@ -70,23 +70,26 @@ setInterval(function() {
   toggle = !toggle;
 },1000);
 
-function getDate () {
+function getCurrentDate() {
   let today = new Date();
   let month = today.toLocaleString( 'default', { month: 'long' });
-  let year = today.getFullYear();
+  let year = today.getFullYear().toString();
   let day = nth(today.getDate());
 
   return month + ' ' + day + ' ' + year;
 }
 
-const nth = function (day) {
+const nth = function(day) {
   return day + (day ? ['th', 'st', 'nd', 'rd'][(day>3 && day<21) || day%10 > 3 ? 0 : day%10] : '');
 }
-
 
 let colorElement = document.getElementById('colorContainer');
 let timeElement = document.getElementById('timeContainer');
 colorElement.addEventListener('click', (event) => {
+
+  if(event.target.id == 'colorContainer') {
+    return;
+  }
   let compStyles = window.getComputedStyle(document.getElementById(event.target.id));
   timeElement.style.color = compStyles.backgroundColor;
   timeElement.style.boxShadow =  ` 0px 0px 40px 15px ${compStyles.backgroundColor}`;

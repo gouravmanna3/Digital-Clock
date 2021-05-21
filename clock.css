@@ -1,13 +1,10 @@
 body {
   background-image: url('https://www.xmple.com/wallpaper/linear-blue-black-gradient-1920x1080-c2-050d2f-01030a-a-0-f-14.svg');
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  user-select: none;
 }
 
 .clock {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  color: #ffffff;
   font-size: 20vw;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
@@ -18,11 +15,10 @@ body {
   padding-left: 8vw;
   margin: 0 8vw;
   border-radius: 5vw;
-  background-color: rgba(255,255,255,0.1);
   backdrop-filter: blur(30px);
   background-clip: padding-box;
-  color: aqua;
-  box-shadow: 0px 0px 40px 15px aqua;
+  color: #48dbfb;
+  box-shadow: 0px 0px 40px 15px #48dbfb;
 }
 
 .clock > .separator {
@@ -39,29 +35,6 @@ body {
 
 .blink {
   visibility: hidden;
-}
-
-.title {
-  text-align: center;
-}
-
-.title h2 {
-  color: hsl(50, 50%, 50%);
-  font-family: 'Niconne', cursive;
-  font-weight: 700;
-  font-size: 5rem;
-  margin: 0;
-  text-shadow: 1px 1px hsl(50, 50%, 45%),
-  2px 2px hsl(50, 50%, 40%),
-  3px 3px hsl(50, 50%, 35%),
-  4px 4px hsl(50, 50%, 34%),
-  5px 5px hsl(50, 50%, 33%),
-  6px 6px hsl(50, 50%, 32%),
-  7px 7px hsl(50, 50%, 31%),
-  8px 8px hsl(50, 50%, 30%),
-  9px 9px hsl(50, 50%, 29%),
-  10px 10px hsl(50, 50%, 28%),
-  10px 10px 30px rgba(0,0,0,.7)
 }
 
 .colors {
@@ -82,27 +55,27 @@ body {
 }
 
 .color1 {
-  background-color: aqua;
+  background-color: #48dbfb;
 }
 
 .color2 {
-  background-color: palegreen;
+  background-color: #f1f2f6;
 }
 
 .color3 {
-  background-color: sandybrown;
+  background-color: #0be881 ;
 }
 
 .color4 {
-  background-color: darkcyan;
+  background-color: #54a0ff;
 }
 
 .color5 {
-  background-color: hotpink;
+  background-color: #ffd32a;
 }
 
 .color6 {
-  background-color: lightblue;
+  background-color: #f368e0;
 }
 
 footer {
@@ -123,30 +96,24 @@ footer span {
 }
 
 .dateDayContainer {
-  width: 30vw;
-  margin: 3vw auto;
+  margin: 3vw auto 4vw;;
   text-align: center;
 }
 
-.weekdays-container{
- display: block;
- color:#b19194;
- position:absolute;
- left:25%;
- top:20vh;
-}
-
-.weekdays{
- margin:10px 20px;
- display: inline-block;
- font-size: 2vw;
-}
-
-.currentday{
-  color:#eee;
-}
-
-
 .date {
   font-size: 3vw;
+  color: red;
 }
+
+.weekdaysContainer {
+  color: #606060;
+  margin: 2vw 0;
+  font-size: 2vw;
+}
+
+.weekdaysContainer > span {
+  margin: 0.5vw;
+}
+
+
+

@@ -5,30 +5,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="clock.css" />
   </head>
-  <body onload="displayTime()">
-    <div class="weekdays-container" onload="getDay()">
-        <div class="weekdays" id="sun">
-          Sun
-        </div>
-        <div class="weekdays" id="mon">
-          Mon
-        </div>
-        <div class="weekdays" id="tue">
-          Tue
-        </div>
-        <div class="weekdays" id="wed">
-          Wed
-        </div>
-        <div class="weekdays" id="thu">
-          Thu
-        </div>
-        <div class="weekdays" id="fri">
-          Fri
-        </div>
-        <div class="weekdays" id="sat">
-          Sat
-        </div>
-    </div>
+  <body onload="displayClock()">
+    <section class="dateDayContainer">
+      <span id="date" class="date"></span>
+      <div class="weekdaysContainer">
+        <span id="sun">Sun</span> 
+        <span id="mon">Mon</span>
+        <span id="tue">Tue</span>
+        <span id="wed">Wed</span>
+        <span id="thu">Thu</span>
+        <span id="fri">Fri</span>
+        <span id="sat"> Sat</span>
+      </div class="weekdaysContainer">
+    </section>
     <div id="timeContainer" class="clock" >
       <span id="hours" class="number"></span>
       <span id="separatorId" class="separator">:</span>
