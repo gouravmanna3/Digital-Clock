@@ -32,7 +32,7 @@ function displayClock() {
  document.getElementById("ampm").textContent = session;
 
   setTimeout(function(){
-    getTime();
+    displayClock();
   }, 1000);
 }
 
