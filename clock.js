@@ -3,10 +3,6 @@ const timeElement = document.getElementById('timeContainer');
 const separatorElement = document.getElementById("separatorId");
 
 function displayClock() {
-  getTime();
-}
-
-function getTime() {
 
   getDay();
   document.getElementById('date').textContent = getCurrentDate();
