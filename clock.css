@@ -17,15 +17,12 @@ body {
   border-radius: 5vw;
   backdrop-filter: blur(30px);
   background-clip: padding-box;
-  color: #48dbfb;
   box-shadow: 0px 0px 40px 15px #48dbfb;
 }
 
 .clock > .separator {
   margin: 0 3vw; 
 }
-
-
 
 .timeformat {
   font-size: 6vw;
@@ -36,6 +33,8 @@ body {
 .blink {
   visibility: hidden;
 }
+
+/* Colors Container Styles */
 
 .colors {
   position: fixed;
@@ -52,6 +51,11 @@ body {
   border-radius: 50%;
   margin: 2vw;
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+.selectedColorBorder {
+  border: 0.5vw solid white;
 }
 
 .color1 {
@@ -59,7 +63,7 @@ body {
 }
 
 .color2 {
-  background-color: #f1f2f6;
+  background-color: #ced6e0;
 }
 
 .color3 {
@@ -78,11 +82,13 @@ body {
   background-color: #f368e0;
 }
 
+/* Footer Styles */
+
 footer {
   position: fixed;
   bottom: 0;
   text-align: center;
-  background-color: black;
+  background: transparent;
   padding: 10px 20px;
   color: white;
   width: 100%;
@@ -102,7 +108,8 @@ footer span {
 
 .date {
   font-size: 3vw;
-  color: red;
+  font-weight: 300;
+  color: #f1f2f6;
 }
 
 .weekdaysContainer {
@@ -115,5 +122,7 @@ footer span {
   margin: 0.5vw;
 }
 
-
-
+.currentday {
+  color: #f1f2f6;
+  font-size: 2.5vw;
+}

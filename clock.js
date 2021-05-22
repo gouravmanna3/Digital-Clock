@@ -1,9 +1,16 @@
+const colorElement = document.getElementById('colorContainer');
+const timeElement = document.getElementById('timeContainer');
+const separatorElement = document.getElementById("separatorId");
+
 function displayClock() {
-  document.getElementById('date').textContent = getCurrentDate();
   getTime();
 }
 
 function getTime() {
+
+  getDay();
+  document.getElementById('date').textContent = getCurrentDate();
+
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -41,30 +48,12 @@ function convertTime(x) {
 
 function getDay() {
   const date = new Date();
-  let day = date.getDay();
+  const day = date.getDay();
 
-  if (day == 6) {
-    document.getElementById("sat").classList.add("currentday");
-  } else if (day == 5) {
-    document.getElementById("fri").classList.add("currentday");
-  } else if (day == 4) {
-    document.getElementById("thu").classList.add("currentday");
-  } else if (day == 3) {
-    document.getElementById("wed").classList.add("currentday");
-  } else if (day == 2) {
-    document.getElementById("tue").classList.add("currentday");
-  } else if (day == 1) {
-    document.getElementById("mon").classList.add("currentday");
-  } else if (day == 0) {
-    document.getElementById("sun").classList.add("currentday");
-  }
-
+  document.getElementById(day).classList.add("currentday");
 }
 
-getDay();
-var toggle = true;
-separatorElement = document.getElementById("separatorId");
-
+let toggle = true;
 setInterval(function() {
   toggle ? separatorElement.classList.add('blink') : separatorElement.classList.remove('blink');
   toggle = !toggle;
@@ -83,14 +72,22 @@ const nth = function(day) {
   return day + (day ? ['th', 'st', 'nd', 'rd'][(day>3 && day<21) || day%10 > 3 ? 0 : day%10] : '');
 }
 
-let colorElement = document.getElementById('colorContainer');
-let timeElement = document.getElementById('timeContainer');
+timeElement.style.color = window.getComputedStyle(colorElement.firstElementChild).backgroundColor;
+colorElement.firstElementChild.classList.add('selectedColorBorder');
+
 colorElement.addEventListener('click', (event) => {
 
   if(event.target.id == 'colorContainer') {
     return;
   }
-  let compStyles = window.getComputedStyle(document.getElementById(event.target.id));
+
+  if(colorElement.querySelector('.selectedColorBorder')) {
+    colorElement.querySelector('.selectedColorBorder').classList.remove('selectedColorBorder');
+  }
+  const selectedColorElement = document.getElementById(event.target.id);
+  selectedColorElement.classList.add('selectedColorBorder');
+  const compStyles = window.getComputedStyle(selectedColorElement);
   timeElement.style.color = compStyles.backgroundColor;
   timeElement.style.boxShadow =  ` 0px 0px 40px 15px ${compStyles.backgroundColor}`;
 })
+
