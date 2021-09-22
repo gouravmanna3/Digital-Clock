@@ -3,7 +3,7 @@ Digital Clock using JS
 
 
 # App Link
-https://gouravmanna3.github.io/Digital-Clock/clock
+### https://gouravmanna3.github.io/Digital-Clock/clock
 
 # Onload Attribute
 Execute a javaScript function immediately after the page is loaded. The onload attribute can be used to check the visitor's browser type and browser version.
