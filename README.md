@@ -2,7 +2,7 @@
 Digital Clock using JS
 
 
-#App Link
+# App Link
 https://gouravmanna3.github.io/Digital-Clock/clock
 
 # Onload Attribute
